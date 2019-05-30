@@ -58,20 +58,20 @@ string longestPalindrome(string s)
         }
     }
 
-    string s1(maxlen,'a');
+    string strMax(maxlen,'a');
 
     for(int i=0; i<maxlen; i++)
-        s1[i] = newStr[i+first];
+       strMax[i] = newStr[i+first];
 
-    string re;
-    for(unsigned int i=0; i<s1.length();i++)
+    string resultStr;
+    for(unsigned int i=0; i<strMax.length();i++)
     {
-        if(s1[i]!='#' && s1[i]!='$')
+        if(strMax[i]!='#' && strMax[i]!='$')
         {
-            re+=s1[i];
+            resultStr+=strMax[i];
         }
     }
-    return re;
+    return resultStr;
 }
 
 int main()
